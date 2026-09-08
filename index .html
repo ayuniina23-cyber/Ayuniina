@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pastel Lezat · Makanan Klasik</title>
+    <!-- Font & style dasar -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #fcf6f0;
+            color: #2d1f14;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* header */
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: #b45f2b;
+            background: linear-gradient(145deg, #b45f2b, #8e4a1f);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 4px 12px rgba(180, 95, 43, 0.15);
+            display: inline-block;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            color: #6b4c34;
+            margin-top: 0.5rem;
+            background: #f0e4d8;
+            display: inline-block;
+            padding: 0.3rem 1.8rem;
+            border-radius: 40px;
+            font-weight: 400;
+            backdrop-filter: blur(2px);
+        }
+
+        .sub-lead {
+            max-width: 600px;
+            margin: 0.8rem auto 0;
+            color: #5a3f2b;
+            font-weight: 400;
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+
+        /* grid pastel */
+        .pastel-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 2.5rem 0 3rem;
+        }
+
+        .card {
+            background: #ffffffdd;
+            backdrop-filter: blur(2px);
+            background: #fffcf9;
+            border-radius: 32px;
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.05), 0 4px 12px rgba(180, 95, 43, 0.08);
+            overflow: hidden;
+            transition: transform 0.2s ease, box-shadow 0.25s;
+            border: 1px solid #f3e4d8;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 24px 44px rgba(120, 70, 30, 0.12);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+            background: #e8d7c8;
+            border-bottom: 2px solid #f0dbcb;
+        }
+
+        .card-body {
+            padding: 1.5rem 1.3rem 1.8rem;
+        }
+
+        .card-body h3 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            color: #3a281d;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-body .desc {
+            font-size: 0.98rem;
+            line-height: 1.6;
+            color: #4d3827;
+            margin-bottom: 1.3rem;
+            opacity: 0.9;
+        }
+
+        .card-body .badge {
+            display: inline-block;
+            background: #e7d4c2;
+            padding: 0.2rem 1rem;
+            border-radius: 30px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            color: #5f3f28;
+            margin-bottom: 0.9rem;
+        }
+
+        .card-body .contact-line {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: #f5ede6;
+            padding: 0.6rem 1rem;
+            border-radius: 60px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #2d1a0e;
+            border: 1px solid #e4d2c0;
+            transition: background 0.2s;
+            width: fit-content;
+        }
+
+        .card-body .contact-line i {
+            font-size: 1.2rem;
+        }
+
+        .card-body .contact-line span {
+            font-weight: 600;
+            color: #b45f2b;
+        }
+
+        .contact-line:hover {
+            background: #eadbd0;
+        }
+
+        /* kontak utama + footer */
+        .contact-section {
+            background: #f3e7dd;
+            border-radius: 60px;
+            padding: 2rem 2.5rem;
+            margin-top: 3rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid #e3cfbe;
+            box-shadow: inset 0 1px 4px rgba(255, 255, 255, 0.6);
+        }
+
+        .contact-section .info {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-section .info .label {
+            font-weight: 600;
+            color: #3f2c1d;
+            font-size: 1.1rem;
+        }
+
+        .contact-section .info .phone {
+            background: #ffffff;
+            padding: 0.6rem 1.6rem;
+            border-radius: 60px;
+            font-weight: 700;
+            color: #8e4a1f;
+            border: 1px solid #dac2ae;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+            font-size: 1.2rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .contact-section .info .phone i {
+            font-size: 1.3rem;
+        }
+
+        .contact-section .cta {
+            background: #b45f2b;
+            color: white;
+            padding: 0.6rem 1.8rem;
+            border-radius: 60px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background 0.2s;
+            border: 1px solid #a05222;
+            letter-spacing: 0.3px;
+        }
+
+        .contact-section .cta:hover {
+            background: #8e4a1f;
+        }
+
+        .footer-note {
+            text-align: center;
+            margin-top: 3rem;
+            font-size: 0.9rem;
+            color: #7f624b;
+            border-top: 1px solid #e2d0be;
+            padding-top: 1.8rem;
+            letter-spacing: 0.2px;
+        }
+
+        .footer-note i {
+            font-style: normal;
+            background: #e7d7c8;
+            padding: 0.1rem 0.6rem;
+            border-radius: 20px;
+        }
+
+        /* fallback icon */
+        .icon-phone:before {
+            content: "📞";
+        }
+        .icon-wa:before {
+            content: "📱";
+        }
+
+        /* responsive */
+        @media (max-width: 640px) {
+            .header h1 {
+                font-size: 2.4rem;
+            }
+            .contact-section {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1.2rem;
+                padding: 1.8rem 1.5rem;
+            }
+            .contact-section .info {
+                width: 100%;
+                flex-wrap: wrap;
+            }
+            .contact-section .cta {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- header -->
+    <div class="header">
+        <h1>🥟 Pastel Nusantara</h1>
+        <p>✨ gurih, renyah, & klasik</p>
+        <div class="sub-lead">isi ayam & sayuran pilihan, dibalut kulit tipis renyah</div>
+    </div>
+
+    <!-- galeri pastel -->
+    <div class="pastel-grid">
+        <!-- card 1 -->
+        <div class="card">
+            <img class="card-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='260' viewBox='0 0 400 260'%3E%3Crect width='400' height='260' fill='%23f2e1d2'/%3E%3Ccircle cx='200' cy='130' r='70' fill='%23dbb594'/%3E%3Cellipse cx='200' cy='100' rx='55' ry='40' fill='%23c1956b'/%3E%3Cpath d='M150 160 L250 160 L230 200 L170 200 Z' fill='%23b58557'/%3E%3Ccircle cx='170' cy='120' r='10' fill='%239d6d43'/%3E%3Ccircle cx='230' cy='120' r='10' fill='%239d6d43'/%3E%3C/svg%3E"
+                 alt="Pastel gurih dengan isian ayam dan wortel">
+            <div class="card-body">
+                <h3>Pastel Ayam</h3>
+                <div class="badge">⭐ favorit</div>
+                <p class="desc">Isian ayam cincang, wortel, dan kentang dengan bumbu rempah. Kulit super renyah, cocok untuk camilan sore.</p>
+                <div class="contact-line">
+                    <span class="icon-phone" style="font-size:1.2rem;"></span>
+                    <span>Pesan via <span>+62 812-3456-7890</span></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- card 2 -->
+        <div class="card">
+            <img class="card-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='260' viewBox='0 0 400 260'%3E%3Crect width='400' height='260' fill='%23e8d7c4'/%3E%3Ccircle cx='200' cy='130' r='75' fill='%23dbb594'/%3E%3Cpath d='M160 80 L240 80 L260 160 L140 160 Z' fill='%23b58557'/%3E%3Crect x='160' y='100' width='80' height='40' rx='8' fill='%23a57248'/%3E%3Ccircle cx='180' cy='150' r='18' fill='%23986f47'/%3E%3Ccircle cx='220' cy='150' r='18' fill='%23986f47'/%3E%3C/svg%3E"
+                 alt="Pastel sayuran dengan potongan wortel dan buncis">
+            <div class="card-body">
+                <h3>Pastel Sayur</h3>
+                <div class="badge">🌱 vegetarian</div>
+                <p class="desc">Campuran wortel, buncis, dan kentang dengan sentuhan bawang putih. Ringan, sehat, dan tetap gurih.</p>
+                <div class="contact-line">
+                    <span class="icon-wa" style="font-size:1.2rem;"></span>
+                    <span>WA <span>+62 812-3456-7890</span></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- card 3 -->
+        <div class="card">
+            <img class="card-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='260' viewBox='0 0 400 260'%3E%3Crect width='400' height='260' fill='%23f7ede3'/%3E%3Ccircle cx='200' cy='130' r='80' fill='%23e3c9b0'/%3E%3Crect x='130' y='90' width='140' height='70' rx='25' fill='%23bf9b79'/%3E%3Ccircle cx='170' cy='130' r='16' fill='%23a67c5a'/%3E%3Ccircle cx='230' cy='130' r='16' fill='%23a67c5a'/%3E%3Cpath d='M140 180 L260 180 L240 220 L160 220 Z' fill='%23b58557'/%3E%3C/svg%3E"
+                 alt="Pastel isi daging sapi pedas">
+            <div class="card-body">
+                <h3>Pastel Pedas</h3>
+                <div class="badge">🌶️ level 3</div>
+                <p class="desc">Daging sapi cincang dengan cabai rawit, daun bawang, dan sedikit kecap. Untuk pecinta rasa tajam.</p>
+                <div class="contact-line">
+                    <span class="icon-phone" style="font-size:1.2rem;"></span>
+                    <span>Telp <span>+62 812-3456-7890</span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- kontak utama + nomor -->
+    <div class="contact-section">
+        <div class="info">
+            <span class="label">📞 Kontak kami</span>
+            <span class="phone">
+                <i>📱</i> +62 812-3456-7890
+            </span>
+            <span style="font-size:0.9rem; color:#5e4030; background:#ead9cb; padding:0.3rem 1rem; border-radius:40px;">
+                📧 pastel@lezat.com
+            </span>
+        </div>
+        <a href="#" class="cta">Pesan Sekarang</a>
+    </div>
+
+    <!-- deskripsi gambar tambahan (sebagai caption) -->
+    <div style="display: flex; flex-wrap: wrap; gap: 1.2rem; justify-content: center; margin: 2rem 0 0.5rem;">
+        <div style="background: #f4e9df; border-radius: 50px; padding: 0.5rem 1.6rem; font-size:0.9rem; color:#4d3422;">
+            <span>🍗 Ayam & wortel</span>
+        </div>
+        <div style="background: #f4e9df; border-radius: 50px; padding: 0.5rem 1.6rem; font-size:0.9rem; color:#4d3422;">
+            <span>🥕 Sayur segar</span>
+        </div>
+        <div style="background: #f4e9df; border-radius: 50px; padding: 0.5rem 1.6rem; font-size:0.9rem; color:#4d3422;">
+            <span>🌶️ Daging pedas</span>
+        </div>
+    </div>
+    <p style="text-align:center; font-size:0.9rem; color:#7b5f4a; margin-top:0.3rem; font-style:italic;">
+        * setiap gambar menampilkan pastel khas dengan isian berbeda
+    </p>
+
+    <!-- footer -->
+    <div class="footer-note">
+        <i>Pastel Lezat</i> — dibuat dengan cinta & rempah pilihan • 2026
+    </div>
+</div>
+</body>
+</html>
