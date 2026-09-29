@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Udang Keju Chewwy - Renyah, Gurih & Keju Lumer!</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts (Poppins) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            orange: '#FF6B00',
+                            yellow: '#FFC700',
+                            red: '#DC2626',
+                            cream: '#FFFBEB',
+                            dark: '#1F2937'
+                        }
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-amber-50/30 text-gray-800 antialiased">
+
+    <!-- 1. NAVBAR / HEADER -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-orange-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo Brand -->
+                <div class="flex items-center space-x-3">
+                    <img src="https://i.ibb.co.com/Dfh9Mpfh/Screenshot-2026-09-28-23-26-23-60-99c04817c0de5652397fc8b56c3b3817.jpg" alt="Logo Udang Keju Chewwy" class="w-12 h-12 object-cover rounded-full border-2 border-brand-orange shadow-md">
+                    <span class="text-xl sm:text-2xl font-extrabold text-gray-900 tracking-tight">
+                        Udang Keju <span class="text-brand-orange">Chewwy</span>
+                    </span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8 font-semibold text-gray-700">
+                    <a href="#beranda" class="hover:text-brand-orange transition-colors">Beranda</a>
+                    <a href="#tentang" class="hover:text-brand-orange transition-colors">Tentang Kami</a>
+                    <a href="#menu" class="hover:text-brand-orange transition-colors">Menu & Harga</a>
+                    <a href="#pembayaran" class="hover:text-brand-orange transition-colors">Pembayaran</a>
+                    <a href="#pesan" class="hover:text-brand-orange transition-colors">Cara Pesan</a>
+                </nav>
+
+                <!-- Header CTA Button -->
+                <div class="hidden md:flex items-center">
+                    <a href="#pesan" class="bg-emerald-500 hover:bg-emerald-600 text-white px-5 py-2.5 rounded-full font-semibold shadow-lg shadow-emerald-500/30 transition-all transform hover:-translate-y-0.5 flex items-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        Pesan Cepat
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-brand-orange focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-100 px-4 pt-2 pb-6 space-y-3 font-medium">
+            <a href="#beranda" class="block px-3 py-2 rounded-md hover:bg-orange-50 text-gray-700 hover:text-brand-orange">Beranda</a>
+            <a href="#tentang" class="block px-3 py-2 rounded-md hover:bg-orange-50 text-gray-700 hover:text-brand-orange">Tentang Kami</a>
+            <a href="#menu" class="block px-3 py-2 rounded-md hover:bg-orange-50 text-gray-700 hover:text-brand-orange">Menu & Harga</a>
+            <a href="#pembayaran" class="block px-3 py-2 rounded-md hover:bg-orange-50 text-gray-700 hover:text-brand-orange">Pembayaran</a>
+            <a href="#pesan" class="block px-3 py-2 rounded-md hover:bg-orange-50 text-gray-700 hover:text-brand-orange">Cara Pesan</a>
+            <a href="#pesan" class="block text-center bg-emerald-500 text-white py-3 rounded-xl font-bold shadow-md">
+                <i class="fa-brands fa-whatsapp mr-1"></i> Pesan via WhatsApp
+            </a>
+        </div>
+    </header>
+
+    <!-- 2. HERO SECTION (BERANDA - Dengan Latar Bayangan) -->
+    <section id="beranda" class="relative overflow-hidden py-16 lg:py-24 bg-gradient-to-br from-amber-950/85 via-orange-950/75 to-gray-900 text-white">
+        <!-- Latar Belakang Bayangan (Background Overlay) -->
+        <div class="absolute inset-0 z-0 opacity-25 mix-blend-overlay">
+            <img src="https://i.ibb.co.com/S4j7FxVq/Screenshot-2026-09-28-23-29-14-89-99c04817c0de5652397fc8b56c3b3817.jpg" alt="Background Bayangan Udang Keju" class="w-full h-full object-cover">
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                
+                <!-- Text Content -->
+                <div class="text-center lg:text-left space-y-6">
+                    <div class="inline-flex items-center gap-2 bg-amber-400/20 border border-amber-400/40 text-amber-300 px-4 py-1.5 rounded-full text-sm font-bold shadow-sm backdrop-blur-md">
+                        <span>🔥 Gurih, Renyah & Lumer Banget!</span>
+                    </div>
+                    
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">
+                        Sensasi Gurih Udang Asli & Keju Melted yang <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-yellow to-brand-orange">Chewwy!</span>
+                    </h1>
+                    
+                    <p class="text-lg text-amber-100/90 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+                        Nikmati kelezatan sempurna olahan udang segar dipadu keju melimpah yang meleleh di setiap gigitan. Dibalut tepung panko renyah dan disajikan dengan saus cocolan merah istimewa.
+                    </p>
+
+                    <!-- Price Tag & CTA -->
+                    <div class="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <div class="bg-white/10 backdrop-blur-md px-5 py-3 rounded-2xl border border-white/20 flex items-center gap-3">
+                            <span class="text-xs text-amber-200 uppercase tracking-wider font-semibold">Harga Cuma</span>
+                            <span class="text-3xl font-black text-brand-yellow">Rp 7.000<span class="text-sm font-medium text-amber-100">/porsi</span></span>
+                        </div>
+                        
+                        <div class="flex items-center gap-3 w-full sm:w-auto">
+                            <a href="#pesan" class="w-full sm:w-auto text-center bg-gradient-to-r from-brand-orange to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg shadow-orange-500/30 transition-all transform hover:-translate-y-1">
+                                Pesan Sekarang
+                            </a>
+                            <a href="#menu" class="w-full sm:w-auto text-center bg-white/20 hover:bg-white/30 text-white border border-white/30 px-6 py-4 rounded-xl font-bold text-lg transition-all backdrop-blur-md">
+                                Lihat Menu
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Small Badges -->
+                    <div class="pt-4 flex flex-wrap justify-center lg:justify-start gap-6 text-sm font-semibold text-amber-100/80">
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-400"></i> Bisa COD</div>
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-400"></i> Fresh Homemade</div>
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-400"></i> Halal & Higienis</div>
+                    </div>
+                </div>
+
+                <!-- Gambar Utama Beranda -->
+                <div class="relative flex justify-center">
+                    <div class="absolute -inset-4 bg-gradient-to-r from-brand-orange to-brand-yellow rounded-full blur-2xl opacity-40 animate-pulse"></div>
+                    <div class="relative bg-white/10 p-3 sm:p-4 rounded-3xl shadow-2xl border border-white/20 backdrop-blur-md max-w-md w-full">
+                        <img src="https://i.ibb.co.com/S4j7FxVq/Screenshot-2026-09-28-23-29-14-89-99c04817c0de5652397fc8b56c3b3817.jpg" alt="Foto Depan Udang Keju Chewwy" class="w-full h-80 sm:h-96 object-cover rounded-2xl shadow-inner">
+                        <div class="absolute bottom-6 right-6 bg-gray-900/90 backdrop-blur-md px-4 py-2 rounded-xl shadow-lg border border-white/20 flex items-center gap-2 text-white">
+                            <span class="text-amber-400 text-lg">⭐</span>
+                            <span class="font-bold">4.9 / 5.0</span>
+                            <span class="text-xs text-gray-300">(Foto Asli)</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. SECTION PENGENALAN PRODUK -->
+    <section id="tentang" class="py-16 lg:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4">
+                <h2 class="text-xs uppercase tracking-widest text-brand-orange font-extrabold">Tentang Produk Kami</h2>
+                <h3 class="text-3xl sm:text-4xl font-extrabold text-gray-900">Kenapa Harus <span class="text-brand-orange">Udang Keju Chewwy?</span></h3>
+                <p class="text-gray-600 leading-relaxed">
+                    Kami menghadirkan camilan berkualitas tinggi yang dibuat secara fresh setiap hari. Sensasi renyah di luar, keju gurih yang meleleh di dalam, dipadu dengan olahan daging udang pilihan. Sekali coba, dijamin ketagihan!
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+                <div class="bg-amber-50/50 p-6 rounded-2xl border border-amber-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-amber-400 text-white rounded-xl flex items-center justify-center text-2xl shadow-md mb-4">
+                        🦐
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-2">100% Udang Pilihan & Keju Lumer</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed">Olahan daging udang segar tanpa pengawet dengan isian keju melimpah yang meleleh hangat saat digigit.</p>
+                </div>
+
+                <div class="bg-amber-50/50 p-6 rounded-2xl border border-amber-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-brand-orange text-white rounded-xl flex items-center justify-center text-2xl shadow-md mb-4">
+                        ✨
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-2">Extra Renyah</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed">Dibalut balur tepung panko renyah berkualitas tinggi yang memberikan tekstur krispi maksimal.</p>
+                </div>
+
+                <div class="bg-amber-50/50 p-6 rounded-2xl border border-amber-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-emerald-500 text-white rounded-xl flex items-center justify-center text-2xl shadow-md mb-4">
+                        🏷️
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-2">Harga Terjangkau</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed">Cukup dengan Rp 7.000 per porsi, Anda sudah bisa menikmati camilan mewah dan lezat ini.</p>
+                </div>
+
+                <div class="bg-amber-50/50 p-6 rounded-2xl border border-amber-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-brand-red text-white rounded-xl flex items-center justify-center text-2xl shadow-md mb-4">
+                        🌶️
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-2">Dilengkapi Saus Spesial Gratis</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed">Setiap porsi sudah dilengkapi dengan saus cocolan merah yang nikmat dan menggugah selera.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. SECTION MENU & PAKET -->
+    <section id="menu" class="py-16 lg:py-24 bg-gradient-to-b from-amber-50/30 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4">
+                <h2 class="text-xs uppercase tracking-widest text-brand-orange font-extrabold">Pilihan Porsi</h2>
+                <h3 class="text-3xl sm:text-4xl font-extrabold text-gray-900">Menu & Paket Hemat</h3>
+                <p class="text-gray-600">Pilih paket favoritmu, siap makan hangat-hangat atau stok dalam bentuk frozen!</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+                <!-- Card 1: Siap Makan -->
+                <div class="bg-white rounded-3xl shadow-lg border border-gray-100 overflow-hidden flex flex-col hover:shadow-2xl transition-all duration-300">
+                    <div class="relative h-48 bg-gray-200">
+                        <img src="https://i.ibb.co.com/1Yvkpgwn/58ed0e76-f932-4924-9212-78589bed1a70-Go-Biz-20250411-161533.jpg" alt="Paket Siap Makan Udang Keju Chewwy" class="w-full h-full object-cover">
+                        <span class="absolute top-4 right-4 bg-emerald-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Siap Makan</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-6">
+                        <div>
+                            <h4 class="text-2xl font-bold text-gray-900">Paket Siap Makan</h4>
+                            <p class="text-gray-500 text-sm mt-2">1 Porsi Udang Keju Chewwy hangat digoreng mendadak + Saus Cocolan Merah.</p>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-extrabold text-brand-orange mb-4">Rp 7.000 <span class="text-sm font-normal text-gray-400">/ porsi</span></div>
+                            <a href="#pesan" onclick="selectPackage('Paket Siap Makan (1 Porsi - Rp 7.000)')" class="block text-center bg-gray-900 hover:bg-brand-orange text-white py-3 rounded-xl font-bold transition-colors">
+                                <i class="fa-brands fa-whatsapp mr-1"></i> Pesan via WA
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Paket Hemat 3 Porsi -->
+                <div class="bg-white rounded-3xl shadow-xl border-2 border-brand-orange overflow-hidden flex flex-col relative transform md:-translate-y-2">
+                    <div class="bg-brand-orange text-white text-center py-1.5 font-bold text-xs uppercase tracking-wider">
+                        ⭐ Paling Laris & Hemat
+                    </div>
+                    <div class="relative h-48 bg-gray-200">
+                        <img src="https://i.ibb.co.com/sd1ZpBjF/79720f92-68d0-4767-8d2e-f3af13df9904-Go-Biz-20250430-171113.jpg" alt="Paket Hemat 3 Porsi Udang Keju Chewwy" class="w-full h-full object-cover">
+                        <span class="absolute top-4 right-4 bg-brand-red text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Hemat Rp 1.000</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-6">
+                        <div>
+                            <h4 class="text-2xl font-bold text-gray-900">Paket Hemat 3 Porsi</h4>
+                            <p class="text-gray-500 text-sm mt-2">3 Porsi Udang Keju Chewwy Siap Makan + Extra Saus Cocolan. Pas buat ngemil ramai-ramai!</p>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-extrabold text-brand-red mb-4">Rp 20.000 <span class="text-sm line-through text-gray-400 font-normal">Rp 21.000</span></div>
+                            <a href="#pesan" onclick="selectPackage('Paket Hemat 3 Porsi (Rp 20.000)')" class="block text-center bg-gradient-to-r from-brand-orange to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white py-3 rounded-xl font-bold shadow-md transition-all">
+                                <i class="fa-brands fa-whatsapp mr-1"></i> Pesan via WA
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Frozen Pack -->
+                <div class="bg-white rounded-3xl shadow-lg border border-gray-100 overflow-hidden flex flex-col hover:shadow-2xl transition-all duration-300">
+                    <div class="relative h-48 bg-gray-200">
+                        <img src="https://i.ibb.co.com/F4xCjSZc/IMG-34c39822-2a04-4b73-9daf-5dfa1f43fca0.jpg" alt="Paket Frozen Pack Udang Keju Chewwy" class="w-full h-full object-cover">
+                        <span class="absolute top-4 right-4 bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Frozen Pack</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-6">
+                        <div>
+                            <h4 class="text-2xl font-bold text-gray-900">Paket Frozen Pack</h4>
+                            <p class="text-gray-500 text-sm mt-2">Kemasan beku higienis bersertifikat Halal (Siap Goreng di Rumah). Tinggal goreng kapan saja!</p>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-extrabold text-brand-orange mb-4">Rp 7.000 <span class="text-sm font-normal text-gray-400">/ porsi</span></div>
+                            <a href="#pesan" onclick="selectPackage('Paket Frozen Pack (Rp 7.000)')" class="block text-center bg-gray-900 hover:bg-brand-orange text-white py-3 rounded-xl font-bold transition-colors">
+                                <i class="fa-brands fa-whatsapp mr-1"></i> Pesan via WA
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. SECTION METODE PEMBAYARAN & PENGIRIMAN -->
+    <section id="pembayaran" class="py-16 bg-white border-y border-amber-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-xs uppercase tracking-widest text-brand-orange font-extrabold">Transaksi & Pengiriman</h2>
+                <h3 class="text-3xl font-extrabold text-gray-900 mt-1">Metode Pembayaran Praktis</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-amber-50/60 p-6 rounded-2xl border border-amber-200 flex items-start gap-4">
+                    <div class="w-12 h-12 bg-emerald-500 text-white rounded-xl flex items-center justify-center text-2xl shrink-0 shadow-md">
+                        <i class="fa-solid fa-hand-holding-dollar"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold text-gray-900">1. Cash on Delivery (COD)</h4>
+                        <p class="text-gray-600 text-sm mt-1 leading-relaxed">Bayar langsung secara tunai kepada kurir saat pesanan Udang Keju Chewwy hangat sampai di lokasi Anda.</p>
+                        <span class="inline-block mt-3 text-xs bg-emerald-100 text-emerald-800 font-bold px-2.5 py-1 rounded-md">Bayar di Tempat</span>
+                    </div>
+                </div>
+
+                <div class="bg-amber-50/60 p-6 rounded-2xl border border-amber-200 flex items-start gap-4">
+                    <div class="w-12 h-12 bg-blue-600 text-white rounded-xl flex items-center justify-center text-2xl shrink-0 shadow-md">
+                        <i class="fa-solid fa-building-columns"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="text-xl font-bold text-gray-900">2. Transfer Bank BRI</h4>
+                        <p class="text-gray-600 text-sm mt-1">Transfer langsung ke rekening resmi toko:</p>
+                        
+                        <div class="mt-3 bg-white p-3 rounded-xl border border-gray-200 flex items-center justify-between">
+                            <div>
+                                <div class="text-xs text-gray-500 font-semibold">BANK BRI</div>
+                                <div id="rekening-no" class="font-mono font-bold text-gray-800 text-base">3882 0102 1023 505</div>
+                                <div class="text-xs text-gray-600 font-medium">a.n. Ayuni Ina Dewi Wati</div>
+                            </div>
+                            <button onclick="copyRekening()" class="bg-gray-100 hover:bg-amber-100 text-gray-700 hover:text-brand-orange px-3 py-1.5 rounded-lg text-xs font-bold transition-all border border-gray-200 flex items-center gap-1">
+                                <i class="fa-regular fa-copy"></i>
+                                <span id="copy-btn-text">Salin No. Rekening</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. SECTION FORM PEMESANAN INTERAKTIF -->
+    <section id="pesan" class="py-16 lg:py-24 bg-gradient-to-b from-amber-50/30 to-amber-100/40">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl shadow-2xl border border-orange-100 overflow-hidden">
+                <div class="bg-gradient-to-r from-brand-orange to-amber-500 p-8 text-white text-center">
+                    <h3 class="text-3xl font-extrabold">Formulir Pemesanan Langsung</h3>
+                    <p class="text-amber-100 text-sm mt-2">Isi data di bawah ini, pesanan akan otomatis terarah ke WhatsApp penjual dengan format rapi!</p>
+                </div>
+
+                <form id="orderForm" onsubmit="sendToWhatsApp(event)" class="p-6 sm:p-10 space-y-6">
+                    <div>
+                        <label class="block text-sm font-bold text-gray-700 mb-2">Nama Lengkap Pembeli *</label>
+                        <input type="text" id="buyerName" required placeholder="Masukkan nama Anda..." class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-brand-orange focus:border-brand-orange outline-none transition-all">
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-bold text-gray-700 mb-2">Pilih Varian Paket *</label>
+                            <select id="packageSelect" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-brand-orange focus:border-brand-orange outline-none transition-all bg-white">
+                                <option value="Paket Siap Makan (1 Porsi - Rp 7.000)">Paket Siap Makan (Rp 7.000/porsi)</option>
+                                <option value="Paket Hemat 3 Porsi (Rp 20.000)">Paket Hemat 3 Porsi (Rp 20.000)</option>
+                                <option value="Paket Frozen Pack (Rp 7.000)">Paket Frozen Pack (Rp 7.000/porsi)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-gray-700 mb-2">Jumlah Porsi *</label>
+                            <input type="number" id="portionQty" min="1" value="1" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-brand-orange focus:border-brand-orange outline-none transition-all">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-bold text-gray-700 mb-2">Pilih Metode Pembayaran *</label>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <label class="border border-gray-200 p-4 rounded-xl flex items-center gap-3 cursor-pointer hover:bg-amber-50/50 has-[:checked]:border-brand-orange has-[:checked]:bg-amber-50">
+                                <input type="radio" name="paymentMethod" value="Cash on Delivery (COD)" checked class="text-brand-orange focus:ring-brand-orange">
+                                <span class="font-bold text-gray-800 text-sm">Cash on Delivery (COD)</span>
+                            </label>
+                            <label class="border border-gray-200 p-4 rounded-xl flex items-center gap-3 cursor-pointer hover:bg-amber-50/50 has-[:checked]:border-brand-orange has-[:checked]:bg-amber-50">
+                                <input type="radio" name="paymentMethod" value="Transfer Bank BRI" class="text-brand-orange focus:ring-brand-orange">
+                                <span class="font-bold text-gray-800 text-sm">Transfer BRI (a.n. Ayuni Ina Dewi Wati)</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-bold text-gray-700 mb-2">Alamat Pengiriman Lengkap *</label>
+                        <textarea id="deliveryAddress" rows="3" required placeholder="Contoh: Jl. Mawar No. 12, RT 02/RW 03..." class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-brand-orange focus:border-brand-orange outline-none transition-all"></textarea>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-bold text-gray-700 mb-2">Catatan Tambahan (Opsional)</label>
+                        <input type="text" id="orderNotes" placeholder="Contoh: Goreng agak garing / Ekstra saus..." class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-brand-orange focus:border-brand-orange outline-none transition-all">
+                    </div>
+
+                    <button type="submit" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-extrabold py-4 rounded-2xl shadow-xl shadow-emerald-500/30 transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-3 text-lg">
+                        <i class="fa-brands fa-whatsapp text-2xl"></i>
+                        Kirim Pesanan via WhatsApp
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. FOOTER -->
+    <footer class="bg-gray-900 text-gray-400 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <img src="https://i.ibb.co.com/Dfh9Mpfh/Screenshot-2026-09-28-23-26-23-60-99c04817c0de5652397fc8b56c3b3817.jpg" alt="Logo Udang Keju Chewwy" class="w-10 h-10 object-cover rounded-full border border-brand-orange">
+                        <span class="text-xl font-bold text-white">Udang Keju <span class="text-brand-orange">Chewwy</span></span>
+                    </div>
+                    <p class="text-sm leading-relaxed text-gray-400">
+                        Camilan Udang Keju Lumer favorit dengan rasa gurih renyah berkualitas tinggi. Melayani pemesanan siap makan & frozen.
+                    </p>
+                </div>
+
+                <div>
+                    <h5 class="text-white font-bold mb-4">Kontak Penjual</h5>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-emerald-400"></i>
+                            <a href="https://wa.me/6281232806305" target="_blank" class="hover:text-white transition-colors">081232806305</a>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-clock text-amber-400"></i>
+                            <span>Buka Setiap Hari: 09.00 - 20.00 WIB</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5 class="text-white font-bold mb-4">Metode Pembayaran</h5>
+                    <div class="flex flex-col gap-2">
+                        <span class="bg-gray-800 text-gray-300 text-xs px-3 py-2 rounded-lg font-bold border border-gray-700 w-fit">COD (Bayar di Tempat)</span>
+                        <span class="bg-gray-800 text-blue-400 text-xs px-3 py-2 rounded-lg font-bold border border-gray-700 w-fit">Bank BRI: 3882 0102 1023 505 (Ayuni Ina Dewi Wati)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-gray-800 text-center text-xs text-gray-500">
+                &copy; 2026 Udang Keju Chewwy. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT FOR INTERACTION -->
+    <script>
+        // Toggle Mobile Navigation Menu
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Copy Bank Account Number Function
+        function copyRekening() {
+            const rekNo = document.getElementById('rekening-no').innerText.replace(/\s+/g, '');
+            navigator.clipboard.writeText(rekNo).then(() => {
+                const btnText = document.getElementById('copy-btn-text');
+                btnText.innerText = 'Tersalin!';
+                setTimeout(() => {
+                    btnText.innerText = 'Salin No. Rekening';
+                }, 2000);
+            });
+        }
+
+        // Auto Select Package when clicked from menu section
+        function selectPackage(packageName) {
+            const selectElem = document.getElementById('packageSelect');
+            for (let i = 0; i < selectElem.options.length; i++) {
+                if (selectElem.options[i].value.includes(packageName.split(' ')[0])) {
+                    selectElem.selectedIndex = i;
+                    break;
+                }
+            }
+        }
+
+        // WhatsApp Order Direct Link Form Handler
+        function sendToWhatsApp(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('buyerName').value;
+            const packageVal = document.getElementById('packageSelect').value;
+            const qty = document.getElementById('portionQty').value;
+            const payment = document.querySelector('input[name="paymentMethod"]:checked').value;
+            const address = document.getElementById('deliveryAddress').value;
+            const notes = document.getElementById('orderNotes').value || '-';
+
+            const sellerPhone = '6281232806305';
+
+            // Format WhatsApp Message Text
+            const message = `Halo *Udang Keju Chewwy*, saya mau pesan!%0A%0A` +
+                `📌 *Detail Pesanan:*%0A` +
+                `• *Nama Pembeli:* ${encodeURIComponent(name)}%0A` +
+                `• *Paket:* ${encodeURIComponent(packageVal)}%0A` +
+                `• *Jumlah:* ${encodeURIComponent(qty)} porsi%0A` +
+                `• *Metode Pembayaran:* ${encodeURIComponent(payment)}%0A%0A` +
+                `📍 *Alamat Pengiriman:*%0A${encodeURIComponent(address)}%0A%0A` +
+                `📝 *Catatan:* ${encodeURIComponent(notes)}%0A%0A` +
+                `Mohon diproses ya, terima kasih!`;
+
+            // Redirect to WhatsApp
+            const waUrl = `https://wa.me/${sellerPhone}?text=${message}`;
+            window.open(waUrl, '_blank');
+        }
+    </script>
+</body>
+</html>
